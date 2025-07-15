@@ -1,263 +1,158 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Deivy Stiven Hernandez | Entrepreneur & Tech Innovator</title>
-  <!-- SEO Meta Tags -->
-  <meta name="description" content="Official website of Deivy Stiven Hernandez, an entrepreneur and tech innovator with expertise in Economics, Finance, and International Commerce. Creator of scalable solutions with AI, Machine Learning, and Python.">
-  <meta name="keywords" content="Deivy, Stiven, Hernandez, entrepreneur, finance, commerce, AI, machine learning, Python, startup, innovation, data science">
-  <meta name="author" content="Deivy Stiven Hernandez">
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Deivy Hernandez | AI CEO</title>
 
-  <!-- Open Graph / Facebook -->
-  <meta property="og:title" content="Deivy Stiven Hernandez | Entrepreneur & Tech Innovator" />
-  <meta property="og:description" content="Entrepreneur with a background in Economics, Finance, and International Commerce, building AI-driven startups in Latin America." />
-  <meta property="og:image" content="https://via.placeholder.com/1200x630.png?text=Deivy+Stiven+Hernandez" />
-  <meta property="og:url" content="https://deivst.github.io/DeivyHernandez/" />
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&display=swap" rel="stylesheet" />
 
-  <!-- Twitter -->
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Deivy Stiven Hernandez | Entrepreneur & Tech Innovator" />
-  <meta name="twitter:description" content="Entrepreneur with a background in Economics, Finance, and International Commerce, building AI-driven startups in Latin America." />
-  <meta name="twitter:image" content="https://via.placeholder.com/1200x630.png?text=Deivy+Stiven+Hernandez" />
-
-  <!-- Styles -->
   <style>
-    * {
-      margin: 0; 
-      padding: 0;
-      box-sizing: border-box;
-      font-family: Arial, sans-serif;
+    /* ----------  PALETA Y BASE ---------- */
+    :root{
+      --bg: #000;
+      --bg-card: #111;
+      --bg-card-hover: #1c1c1c;
+      --text-main: #e6e6e6;
+      --text-sub: #9ca3af;
+      --accent: #3b82f6;   /* azul corporativo */
+      --border: #333;
+      --radius: 8px;
+      --shadow: 0 4px 20px rgba(0,0,0,.25);
     }
-    body {
-      color: #333;
-      background-color: #f9f9f9;
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{
+      font-family: 'Inter',system-ui, sans-serif;
+      background: var(--bg);
+      color: var(--text-main);
+      line-height: 1.6;
     }
-    header, nav, main, section, footer {
-      padding: 1em;
-      margin: 0 auto;
-      max-width: 1200px;
+    a{color:var(--accent);text-decoration:none}
+    a:hover{text-decoration:underline}
+
+    /* ----------  LAYOUT ---------- */
+    .container{
+      max-width: 960px;
+      margin: auto;
+      padding: 4rem 1.25rem;
     }
-    header {
-      text-align: center;
-      padding: 2em 1em;
-      background: #1E1E1E;
-      color: #fff;
+    h1{font-size:3.2rem;font-weight:900;margin-bottom:.5rem;color:#fff;letter-spacing:-.5px}
+    h2{font-size:1.9rem;font-weight:700;margin:3rem 0 1rem}
+    h3{font-size:1.3rem;font-weight:600;margin-bottom:.5rem;color:#fff}
+    p{max-width:78ch}
+    .tagline{font-size:1.25rem;color:var(--text-sub);font-weight:500}
+    .section{margin-top:3rem}
+
+    /* ----------  CARDS ---------- */
+    .card{
+      background:var(--bg-card);
+      border:1px solid var(--border);
+      border-radius:var(--radius);
+      padding:1.5rem 1.75rem;
+      transition:.25s ease;
     }
-    header h1 {
-      font-size: 2.2rem;
-      margin-bottom: 0.5em;
-    }
-    header p {
-      font-size: 1.1rem;
-    }
-    nav {
-      display: flex;
-      justify-content: center;
-      gap: 1.5rem;
-      margin-bottom: 2em;
-    }
-    nav a {
-      color: #1E1E1E;
-      text-decoration: none;
-      font-weight: bold;
-      padding: 0.5em;
-    }
-    nav a:hover {
-      text-decoration: underline;
-    }
-    main section {
-      margin-bottom: 2em;
-      background: #fff;
-      border-radius: 5px;
-      box-shadow: 0 0 8px rgba(0,0,0,0.1);
-      padding: 1.5em;
-    }
-    main section h2 {
-      font-size: 1.5rem;
-      margin-bottom: 1em;
-      border-bottom: 2px solid #f0f0f0;
-      padding-bottom: 0.5em;
-    }
-    .skills-list, .competencies-list, .courses-list {
-      list-style: none;
-      margin-left: 0;
-      padding-left: 1em;
-    }
-    .skills-list li::before, .competencies-list li::before, .courses-list li::before {
-      content: "• ";
-      color: #E67E22;
-    }
-    footer {
-      text-align: center;
-      margin-top: 2em;
-      padding: 2em 1em;
-      background-color: #1E1E1E;
-      color: #fff;
-    }
-    form {
-      display: flex;
-      flex-direction: column;
-      gap: 0.8em;
-      max-width: 400px;
-      margin: 1em auto;
-    }
-    form label {
-      font-weight: bold;
-    }
-    form input, form textarea {
-      padding: 0.7em;
-      border: 1px solid #ccc;
-      border-radius: 4px;
-      font: inherit;
-    }
-    form button {
-      border: none;
-      background: #E67E22;
-      color: #fff;
-      padding: 0.8em;
-      cursor: pointer;
-      border-radius: 4px;
-      font-weight: bold;
-    }
-    form button:hover {
-      background: #d35400;
-    }
+    .card:hover{background:var(--bg-card-hover);box-shadow:var(--shadow)}
+    .grid{display:grid;gap:1.5rem}
+    @media(min-width:700px){.grid-2{grid-template-columns:repeat(2,1fr)}}
+    @media(min-width:900px){.grid-3{grid-template-columns:repeat(3,1fr)}}
+
+    ul{padding-left:1.2rem;margin-top:.5rem}
+    li{margin:.3rem 0}
+
+    /* ----------  FOOTER ---------- */
+    .links{margin-top:1.5rem;display:flex;gap:1.5rem;flex-wrap:wrap}
+    .links a{font-weight:600;color:var(--text-main)}
+    .links a:hover{color:var(--accent)}
+    .footer{margin-top:3rem;font-size:.85rem;color:var(--text-sub);text-align:center}
   </style>
 </head>
 <body>
+  <main class="container">
 
-  <header>
-    <h1>Deivy Stiven Hernandez</h1>
-    <p>Entrepreneur & Tech Innovator | Bogota, Colombia</p>
-  </header>
-
-  <!-- Navigation Menu -->
-  <nav>
-    <a href="#about">About Me</a>
-    <a href="#education">Education</a>
-    <a href="#competencies">Competencies</a>
-    <a href="#experience">Experience</a>
-    <a href="#contact">Contact</a>
-  </nav>
-
-  <main>
-    <!-- About Me Section -->
-    <section id="about">
-      <h2>About Me</h2>
-      <p>
-        I am passionate about solving real-world problems and building solutions that improve people's daily lives.
-        My academic background in <strong>Economics</strong> and <strong>Finance & International Commerce</strong> has 
-        enabled me to develop a global market perspective. I have co-founded multiple startups, with the conviction 
-        that the right technology and a dedicated team can redefine industries that appear static and outdated.
+    <!-- HERO -->
+    <header>
+      <h1>Deivy Hernandez</h1>
+      <p class="tagline">CEO&nbsp;| AI Strategist&nbsp;| Multi‑Startup Founder</p>
+      <p class="intro" style="margin-top:1.3rem">
+        I lead the design and deployment of next‑generation AI systems. From founding high‑growth startups to pioneering intelligent automation <strong>before ChatGPT</strong>,
+        my mission is to transform industries through strategic innovation and scalable machine intelligence.
       </p>
-      <p>
-        I strive to create initiatives that are truly scalable and leave a positive footprint on society.
-        My focus is on <strong>innovation and technology</strong>, using AI, Machine Learning, and 
-        Python-based solutions to address real-world challenges. 
-      </p>
-      <p>
-        I enjoy bringing people together to accomplish extraordinary things and building teams that are
-        motivated, diverse, and empowered. My leadership style encourages autonomy, shared responsibility, 
-        and ongoing feedback, always aiming for productivity and tangible results.
+    </header>
+
+    <!-- SKILLS -->
+    <section class="section">
+      <h2>AI & Technical Mastery</h2>
+      <div class="grid grid-2">
+        <div class="card">
+          <ul>
+            <li><strong>LLMs:</strong> Fine‑tuning, RLHF, PPO, DPO, STF</li>
+            <li><strong>Knowledge Integration:</strong> RAG pipelines, custom embeddings</li>
+            <li><strong>Autonomy:</strong> Multi‑agent systems & orchestration</li>
+            <li><strong>Infrastructure:</strong> GCP, Docker, DevOps, scalable SaaS</li>
+          </ul>
+        </div>
+        <div class="card">
+          <p>
+            I bridge deep AI research with product strategy, guiding cross‑functional teams to launch
+            intelligent solutions that deliver exponential value across construction, logistics and e‑commerce.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- COMPANIES -->
+    <section class="section">
+      <h2>Companies I Founded</h2>
+
+      <div class="grid">
+        <div class="card">
+          <h3>Catuh.com <span style="font-weight:400;color:var(--text-sub)">(2023 – Present)</span></h3>
+          <p>
+            Autonomous agent ecosystem with real‑time alignment and modular RAG architectures. <strong>Focused on
+            scalable, human‑aligned AI tools.</strong>
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>TuConstrucción.com.co <span style="font-weight:400;color:var(--text-sub)">(2018 – Present)</span></h3>
+          <p>
+            <strong>Implemented AI automation pre‑ChatGPT</strong> to modernize procurement & logistics in
+            construction through predictive models and intelligent decision engines.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>Northem Group SAS <span style="font-weight:400;color:var(--text-sub)">(2016 – 2024)</span></h3>
+          <p>
+            Integrated NLP, recommendation engines and fraud detection across e‑commerce operations
+            <strong>well before mainstream LLMs.</strong>
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>Titan Group SAS <span style="font-weight:400;color:var(--text-sub)">(2014 – 2019)</span></h3>
+          <p>
+            Global trade platform between LATAM and Asia with early AI dashboards for supply‑chain forecasting
+            and risk analysis.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="section">
+      <h2>Contact & Links</h2>
+      <div class="links">
+        <a href="https://www.linkedin.com/in/deivy-stiven-hernandez-casta%C3%B1eda-32646271/" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://github.com/Deivst" target="_blank" rel="noopener">GitHub</a>
+        <a href="mailto:deivst97@gmail.com">Email</a>
+      </div>
+      <p class="footer">
+        Bogotá, Colombia &mdash; Open to global leadership roles
       </p>
     </section>
 
-    <!-- Education Section -->
-    <section id="education">
-      <h2>Education</h2>
-      <p><strong>Economics & Finance and International Commerce</strong></p>
-      <p>
-        I combine economic analysis and a deep understanding of global markets to discover 
-        new business opportunities in different countries such as Ecuador, China, Brazil, the USA, and Colombia.
-        My academic background has allowed me to design and execute expansion plans with a clear focus on 
-        profitability and sustainable, productive growth.
-      </p>
-      <h3>Languages</h3>
-      <ul class="skills-list">
-        <li>English: Conversational</li>
-        <li>Portuguese: Conversational</li>
-      </ul>
-    </section>
-
-    <!-- Competencies Section -->
-    <section id="competencies">
-      <h2>Core Competencies</h2>
-      <ul class="competencies-list">
-        <li>Technology & Innovation</li>
-        <li>AI, Machine Learning, Python, and databases for problem-solving</li>
-        <li>Business Strategy & Scalability</li>
-        <li>Customer-centric business models focused on profitability & experience</li>
-        <li>Leadership & Culture: building strong, motivated, and diverse teams</li>
-        <li>Focus on productivity and data-driven results</li>
-      </ul>
-    </section>
-
-    <!-- Courses & Certifications -->
-    <section>
-      <h2>Highlighted Courses & Certifications</h2>
-      <ul class="courses-list">
-        <li><strong>Startup Creation:</strong> How to develop innovative businesses — USP (Sept. 2020)</li>
-        <li><strong>Company Consolidation:</strong> Legal and financial structures — USP (Sept. 2020)</li>
-        <li><strong>Professional Git & GitHub:</strong> Platzi (Nov. 2024)</li>
-        <li><strong>Practical SQL Course:</strong> Platzi (Nov. 2024)</li>
-        <li><strong>MySQL & MariaDB Databases:</strong> Platzi (Nov. 2024)</li>
-      </ul>
-    </section>
-
-    <!-- Experience/Projects Section -->
-    <section id="experience">
-      <h2>Entrepreneurial Journey</h2>
-      <h3>Cofounder: <em>TitanDecko</em></h3>
-      <p>
-        At TitanDecko, our goal was to transform the traditional surface coverings market through strategic product
-        use and technology. We automated internal processes using Python to predict stock demand by integrating
-        economic and socio-demographic variables. This approach allowed us to improve user experience 
-        and adjust supply more efficiently.
-      </p>
-
-      <h3>Cofounder: <em>TuConstruccion.com.co</em></h3>
-      <p>
-        Born from the belief that the construction sector could be optimized with AI and quantitative analysis,
-        we implemented classification algorithms and indexing to help people decide where to buy or rent real estate.
-        Through comparative analysis and causality studies, we guide customers toward the best cost-benefit
-        opportunities in the market.
-      </p>
-
-      <h3>Cofounder: <em>Catuh.com</em></h3>
-      <p>
-        Catuh emerged to provide an AI-based solution that helps individuals save time on repetitive tasks such as 
-        document transcription (invoices, certificates). By leveraging AI, we offer clean, ready-to-use data so
-        organizations can focus on what matters: growth.
-      </p>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact">
-      <h2>Contact</h2>
-      <p>
-        Interested in collaborating, investing, or simply learning more about my work? 
-        Feel free to reach out or visit my GitHub portfolio to see the projects I’ve been working on.
-      </p>
-      <p>
-         <strong>GitHub:</strong> <a href="https://github.com/Deivst" target="_blank" rel="noopener noreferrer">
-          https://github.com/Deivs
-      </p>     
-          
-      <p>
-         <strong>linkedin:</strong> <a href="https://www.linkedin.com/in/deivy-stiven-hernandez-casta%C3%B1eda-32646271/" target="_blank" rel="noopener noreferrer">
-          https://www.linkedin.com/in/deivy-stiven-hernandez-casta%C3%B1eda-32646271/  
-        
-      </p>
-      
-    </section>
   </main>
-
-  <!-- Footer -->
-  <footer>
-    <p>&copy; 2024 Deivy Stiven Hernandez. All rights reserved.</p>
-  </footer>
-
 </body>
 </html>
